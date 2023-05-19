@@ -1,0 +1,47 @@
+{
+  "name": "heroes-and-daemons",
+  "version": "1.0.0",
+  "description": "Game about Heroes nad Daemons",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "webpack --mode production",
+    "dev": "npm run build && webpack serve --mode development",
+    "lint:fix": "eslint --fix --ext .js,.jsx ."
+  },
+  "jest": {
+    "transform": {
+      ".+\\.jsx?$": "babel-jest"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlSudar/heroes-and-daemons.git"
+  },
+  "author": "Alex Sudarev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlSudar/heroes-and-daemons/issues"
+  },
+  "homepage": "https://github.com/AlSudar/heroes-and-daemons#readme",
+  "devDependencies": {
+    "@babel/core": "7.21.4",
+    "@babel/eslint-parser": "7.21.3",
+    "@babel/preset-env": "7.21.4",
+    "@types/jest": "29.5.1",
+    "babel-jest": "29.5.0",
+    "babel-loader": "9.1.2",
+    "css-loader": "6.7.3",
+    "eslint": "8.39.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "eslint-webpack-plugin": "4.0.1",
+    "html-webpack-plugin": "5.5.1",
+    "style-loader": "3.3.2",
+    "svg-inline-loader": "0.8.2",
+    "webpack": "5.80.0",
+    "webpack-cli": "5.0.2",
+    "webpack-dev-server": "4.13.3"
+  }
+}
