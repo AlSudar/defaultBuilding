@@ -40,6 +40,7 @@
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-webpack-plugin": "4.0.1",
     "html-webpack-plugin": "5.5.1",
+    "mini-css-extract-plugin": "^2.7.6",
     "style-loader": "3.3.2",
     "svg-inline-loader": "0.8.2",
     "webpack": "5.80.0",
