@@ -1,8 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ESLintPlugin = require("eslint-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -14,6 +12,7 @@ module.exports = {
     static: {
       directory: path.join(__dirname, "/public"),
     },
+    watchFiles: path.join(__dirname, "src/js"),
     open: true,
     compress: true,
     port: 9000,
@@ -38,28 +37,8 @@ module.exports = {
         },
       },
       {
-        test: /\.html$/,
-        use: [
-          {
-            loader: "html-loader",
-          },
-        ],
-      },
-      {
-        test: /\.(png|jpg|gif)$/i,
-        use: [
-          {
-            loader: "url-loader",
-            options: {
-              limit: 8192,
-              name: "assets/[hash].[ext]",
-            },
-          },
-        ],
-      },
-      {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.svg$/,
@@ -67,17 +46,10 @@ module.exports = {
       },
     ],
   },
-  optimization: {
-    minimizer: [new CssMinimizerPlugin()],
-  },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
-      filename: "./index.html",
-    }),
-    new MiniCssExtractPlugin({
-      filename: "[name].css",
-      chunkFilename: "[id].css",
+      template: path.join(__dirname, "src", "index.html"),
+      filename: "index.html",
     }),
     new ESLintPlugin(),
   ],

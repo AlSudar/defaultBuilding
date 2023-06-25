@@ -12,15 +12,6 @@
     "no-console": "off",
     "import/prefer-default-export": "off",
     "quotes": [2, "double", { "avoidEscape": true }],
-    "object-curly-newline": [
-      "error",
-      {
-        "ObjectExpression": "always",
-        "ObjectPattern": { "multiline": true },
-        "ImportDeclaration": "never",
-        "ExportDeclaration": { "multiline": true, "minProperties": 3 }
-      }
-    ],
     "no-plusplus": "off",
     "comma-dangle": "off",
     "implicit-arrow-linebreak": "off",
@@ -28,6 +19,15 @@
     "no-loop-func": "off",
     "operator-linebreak": "off",
     "array-callback-return": "off",
-    "no-param-reassign": "off"
+    "no-param-reassign": "off",
+    "class-methods-use-this": "off",
+    "no-unused-expressions": "off",
+    "no-underscore-dangle": "off",
+    "indent": "off",
+    "prefer-const": "off",
+    "no-new": "off",
+    "no-restricted-syntax": "off",
+    "object-curly-newline": "off",
+    "dot-notation": "off"
   }
 }
