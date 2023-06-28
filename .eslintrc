@@ -28,6 +28,11 @@
     "no-new": "off",
     "no-restricted-syntax": "off",
     "object-curly-newline": "off",
-    "dot-notation": "off"
+    "dot-notation": "off",
+    "max-len": "off",
+    "no-return-assign": "off",
+    "no-else-return": "off",
+    "consistent-return": "off",
+    "new-cap": "off"
   }
 }

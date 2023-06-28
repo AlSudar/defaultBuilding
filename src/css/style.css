@@ -7,9 +7,176 @@ body {
   height: 100%;
   margin: 0;
   display: flex;
+  font-size: 16px;
+  margin: 0;
+  width: 100%;
 }
 
-body {
+#root {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.main {
+  width: 100%;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.list-item {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  column-gap: 20px;
+  position: relative;
+  padding: 0 0 24px;
+}
+
+.list-item:last-of-type {
+  padding: 0;
+}
+
+.list-item::before {
+  content: "";
+  position: absolute;
+  min-height: 100%;
+  width: 1px;
   background: #000;
+  left: 10.5px;
+}
+
+.list-item-dot {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.list-item-content {
+  padding: 16px;
+  border: 1px solid black;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.list-item-time {
+  display: block;
+  margin: 0 0 0 auto;
+  width: fit-content;
   font-size: 16px;
+}
+
+.list-item-description {
+  margin: 0;
+  font-size: 20px;
+}
+
+.list-item-geo {
+  display: block;
+  margin: 10px 0 0;
+  font-size: 16px;
+}
+
+.textarea-wrapper {
+  display: block;
+  margin: 24px 0 0;
+  position: relative;
+}
+
+.textarea {
+  min-width: 100%;
+}
+
+.button {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  top: 10px;
+  right: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-micro {
+  right: 60px;
+}
+
+.button-video {
+  right: 10px;
+}
+
+.modal {
+  position: fixed;
+  z-index: 10;
+  padding: 20px;
+  border: 1px solid black;
+  max-width: 600px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+}
+
+.modal h2 {
+  font-size: 24px;
+  margin: 0 0 24px;
+}
+
+.modal p {
+  font-size: 20px;
+  margin: 0 0 16px;
+}
+
+.modal label {
+  display: block;
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+.modal input {
+  display: block;
+  min-width: 90%;
+  padding: 8px 12px;
+  font-size: 20px;
+  margin: 0 0 16px;
+}
+
+.modal-buttons {
+  display: flex;
+  column-gap: 20px;
+}
+
+.modal-button {
+  padding: 10px;
+  background: transparent;
+  font-size: 20px;
+  box-shadow: none;
+  border-radius: 8px;
+}
+
+.button-micro {
+  background-image: url("../svg/microphone.svg");
+}
+
+.button-video {
+  background: url("../svg/iphone.svg") no-repeat center;
+}
+
+.button-stop {
+  width: fit-content;
+  padding: 10px;
+  right: 120px;
+  border-radius: 0;
+  display: none;
 }
