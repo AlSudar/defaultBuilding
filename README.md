@@ -1,3 +1,1 @@
-![CI](https://github.com/AlSudar/defaultBuilding/actions/workflows/web.yml/badge.svg)
-
-Это дефолтная сборка подходящая для большинства простых приложений
+![Сборки](https://blog-qt1t.vercel.app/)
