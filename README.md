@@ -1,1 +1,1 @@
-![Сборки](https://blog-qt1t.vercel.app/)
+[Сборка](https://blog-qt1t.vercel.app/)
